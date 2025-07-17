@@ -1,11 +1,29 @@
-.env
+# 👉 Ignore Python virtual environments
 venv/
+ENV/
+env/
+
+# 👉 Ignore Python cache files
 __pycache__/
 *.pyc
-*.wav
-*.mp4
-*.exe
+*.pyo
+*.pyd
+
+# 👉 Ignore OS/system files
+.DS_Store
+Thumbs.db
+
+# 👉 Ignore logs
+*.log
+
+# 👉 Ignore large generated media files
 audios/
 videos/
-*.log
+*.wav
+*.mp4
+
+# 👉 Ignore environment variables (if you store secrets)
 *.env
+
+# 👉 VS Code workspace settings (optional)
+.vscode/
