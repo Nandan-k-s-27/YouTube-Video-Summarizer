@@ -266,7 +266,7 @@
                 <h2 class="section-title">
                     ⭐ Summary
                 </h2>
-                <button class="copy-btn" onclick="copyToClipboard('summary')">📋 Copy</button>
+                <button class="copy-btn" onclick="copyToClipboard('summary', event)">📋 Copy</button>
             </div>
             <div class="content-box summary-box" id="summary">{{ summary }}</div>
         </div>
@@ -276,7 +276,7 @@
                 <h2 class="section-title">
                     📝 Full Transcript
                 </h2>
-                <button class="copy-btn" onclick="copyToClipboard('transcript')">📋 Copy</button>
+                <button class="copy-btn" onclick="copyToClipboard('transcript', event)">📋 Copy</button>
             </div>
             <div class="content-box" id="transcript">{{ text }}</div>
         </div>
@@ -292,7 +292,7 @@
     </div>
 
     <script>
-        function copyToClipboard(elementId) {
+        function copyToClipboard(elementId, event) {
             const element = document.getElementById(elementId);
             const text = element.textContent;
             
